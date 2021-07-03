@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:minHeight="40dp"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/close"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_close_circle_outline_grey600_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@+id/close"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Filters"
+            android:textSize="16sp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/filterTitle"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/price"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:layout_below="@+id/header"/>
+
+        <com.yahoo.mobile.client.android.util.rangeseekbar.RangeSeekBar
+            android:layout_marginTop="4dp"
+            android:id="@+id/rangeSeekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            app:absoluteMinValue="999999"
+            app:absoluteMaxValue="0.0"
+           android:layout_below="@+id/price"/>
+    <RelativeLayout
+        android:id="@+id/ratinglyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/rangeSeekbar"
+        >
+        <TextView
+            android:id="@+id/rating"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="13sp"
+           />
+        <include layout="@layout/rating" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableList"
+        android:layout_below="@+id/ratinglyt"
+        android:groupIndicator="@null"
+        android:layout_above="@+id/bottomLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TableLayout
+        android:id="@+id/bottomLay"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:stretchColumns="1">
+
+        <TableRow android:background="@color/white">
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_corner_lightgrey"
+                android:text="Clear All" />
+
+            <Button
+                android:id="@+id/apply"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_corner_blue"
+                android:text="Apply" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

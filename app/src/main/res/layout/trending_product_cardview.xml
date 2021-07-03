@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/trendingcard"
+    android:layout_height="wrap_content"
+    android:layout_width="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="2dp"
+    app:cardCornerRadius="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/productgrid">
+
+        <ImageView
+            android:id="@+id/trendingIV"
+            android:layout_width="160dp"
+            android:layout_height="100dp"
+            android:src="@drawable/transparent_shadow"/>
+        <TextView
+            android:id="@+id/trendingTV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="roll"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/trendingIV"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            />
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_below="@id/trendingTV1">
+
+           <com.iarcuschin.simpleratingbar.SimpleRatingBar
+               android:id="@+id/trendingRB"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               app:srb_stepSize="1"
+               app:srb_starSize="12dp"
+               app:srb_fillColor="@color/black"
+               app:srb_starBackgroundColor="@color/white"
+               app:srb_isIndicator="true"
+               />
+
+       </LinearLayout>
+        <TextView
+            android:id="@+id/trendingTV2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/purple_200"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/trendingTV1"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

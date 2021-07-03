@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:background="@drawable/login_bg">
+    <ImageView
+        android:id="@+id/sign_loginIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/setting_icon"/>
+    <Spinner
+        android:id="@+id/serviceSpnr"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/serviceName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Service"
+        android:textAllCaps="true"
+        android:textStyle="italic"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/sign_loginIV"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/serviceName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundtextview"
+        android:paddingLeft="5dp"
+        android:hint="  Enter Name"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/regemail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundtextview"
+        android:paddingLeft="5dp"
+        android:hint="  Enter Email"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/serviceName"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/regphone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundtextview"
+        android:paddingLeft="5dp"
+        android:hint="  Enter Phone"
+        android:inputType="number"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/regemail"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/regpass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="  Enter Address"
+        android:textSize="25sp"
+        android:textColorHint="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="5dp"
+        android:background="@drawable/roundtextview"
+        android:layout_below="@+id/regphone"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/regbtn"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dashroundbtn"
+        android:text="  Continue"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="25sp">
+
+    </Button>
+</RelativeLayout>

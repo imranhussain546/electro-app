@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loginpage">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bgcurve"
+        android:scaleType="fitStart"
+
+        />
+
+    <ImageView
+        android:id="@+id/sign_loginIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="true"
+        android:textStyle="italic"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/sign_loginIV"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/lgname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/user_icon"
+        android:paddingLeft="5dp"
+        android:background="@drawable/roundtextview"
+        android:hint="  User Name"
+        android:textColorHint="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/lgpass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="  Password"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="5dp"
+        android:drawableLeft="@drawable/lock_icon"
+        android:background="@drawable/roundtextview"
+        android:layout_below="@+id/lgname"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/lgforgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="12sp"
+        android:layout_below="@+id/lgpass"
+        android:textColor="#5F9BFF"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="250dp"/>
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:background="@drawable/dashroundbtn"
+        android:layout_below="@id/lgforgotpass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>

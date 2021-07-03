@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/shopbycatCARD"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="10dp"
+    app:cardCornerRadius="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/shopIV"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/shopTV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/shopIV"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/shopTV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/shopTV1"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+           />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

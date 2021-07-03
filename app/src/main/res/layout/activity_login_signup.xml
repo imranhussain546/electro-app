@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgcolor">
+
+
+
+    <ImageView
+        android:id="@+id/sign_loginIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="93dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elecro Shop"
+        android:textAllCaps="true"
+        android:textStyle="italic"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/sign_loginIV"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+<Button
+    android:id="@+id/sign_loginLOGIN"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundbtn"
+    android:text="Login"
+    android:textAllCaps="true"
+    android:textSize="25sp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"/>
+<Button
+    android:id="@+id/sign_loginSIGNUP"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundbtn"
+    android:text="REGISTER"
+    android:textAllCaps="true"
+    android:textSize="25sp"
+    android:layout_below="@id/sign_loginLOGIN"
+    android:layout_marginTop="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"/>
+
+
+
+</RelativeLayout>

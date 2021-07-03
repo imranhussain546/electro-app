@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_service"
+        android:icon="@mipmap/setting_icon"
+        android:title="Service" />
+
+    <item
+        android:id="@+id/navigation_offer"
+        android:icon="@drawable/flash"
+        android:title="Offers" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_brand"
+        android:icon="@drawable/brnd"
+        android:title="Brands" />
+
+    <item
+        android:id="@+id/navigation_category"
+        android:icon="@drawable/category"
+        android:title="Category" />
+
+</menu>

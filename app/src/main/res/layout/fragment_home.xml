@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:id="@+id/fragmenthome"
+
+    >
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:src="@drawable/home"
+
+      android:scaleType="fitStart"
+     />
+
+    <LinearLayout
+        android:id="@+id/lytSearchview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+       >
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_search"
+            android:clickable="false"
+            android:focusable="false"
+            android:queryHint="Search Here" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="3dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@id/lytSearchview"
+        android:layout_marginTop="65dp"/>
+    <TextView
+        android:id="@+id/hometv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fresh Products"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_below="@id/category_recyclerview"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/slide_outline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardMaxElevation="2dp"
+        app:cardUseCompatPadding="true"
+        android:layout_margin="20dp"
+        android:layout_below="@id/hometv1">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/hometv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular Brands"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_below="@id/slide_outline"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        />
+   <LinearLayout
+       android:id="@+id/topbrand"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="16dp"
+       android:layout_marginTop="8dp"
+       android:layout_marginEnd="16dp"
+       android:layout_marginBottom="16dp"
+       android:orientation="horizontal"
+       android:layout_below="@id/hometv2">
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/circularIV1"
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:layout_weight="1"
+           android:src="@mipmap/ic_launcher"
+           app:civ_border_color="@color/white"
+           app:civ_border_width="4dp" />
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/circularIV2"
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:layout_weight="1"
+           android:src="@mipmap/ic_launcher"
+           app:civ_border_color="@color/white"
+           app:civ_border_width="4dp" />
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/circularIV3"
+           android:layout_width="70dp"
+           android:layout_height="80dp"
+           android:layout_weight="1"
+           android:src="@mipmap/ic_launcher"
+           app:civ_border_color="@color/white"
+           app:civ_border_width="4dp" />
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/circularIV4"
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:layout_weight="1"
+           android:src="@mipmap/ic_launcher"
+           app:civ_border_color="@color/white"
+           app:civ_border_width="4dp" />
+   </LinearLayout>
+    <TextView
+        android:id="@+id/hometv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop By Category"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_below="@id/topbrand"
+        android:layout_marginTop="5dp"
+       android:layout_centerHorizontal="true"
+        />
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/home_shop_by_cat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/hometv3"/>
+    <TextView
+        android:id="@+id/hometv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trending Product"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_below="@id/home_shop_by_cat"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_trendingProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hometv4"
+   />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/home_trendingProduct">
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/purple_200"
+            />
+        <TextView
+            android:id="@+id/showmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:text="Show_More"
+            android:textSize="16sp"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/showless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show_Less"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
+        <View
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/purple_200"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>

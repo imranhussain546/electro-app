@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/profileIVedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/profileRel2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/circle_bg"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/profileIV"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="2dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/profileFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:fabSize="mini"
+            android:src="@drawable/ic_camera"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/profileName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileRel2"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/profileEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileName"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/profilePno"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileEmail"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/profileChangepass"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="ChangePassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profilePno"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/profileOLDpass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileChangepass"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    <EditText
+        android:id="@+id/profileNEWpass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileOLDpass"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/profileSave"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/profileNEWpass"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
+</ScrollView>
